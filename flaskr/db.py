@@ -39,3 +39,6 @@ def init_db_command():
 def init_app(app):
     app.teardown_appcontext(close_db)
     app.cli.add_command(init_db_command)
+
+# Run the init-db command: flask --app flaskr init-db
+# There will now be a flaskr.sqlite file in the instance folder in your project.
